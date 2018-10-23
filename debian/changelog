@@ -1,0 +1,5 @@
+openssl1.0 (1.0.2o-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Laurent Declercq <l.declercq@nuxwin.com>  Wed, 24 Oct 2018 01:20:28 +0200

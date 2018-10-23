@@ -1,0 +1,34 @@
+---
+ Makefile.org |    7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+--- openssl-1.0.orig/Makefile.org
++++ openssl-1.0/Makefile.org
+@@ -162,7 +162,8 @@ MAKEFILE= Makefile
+ MANDIR=/opt/imscp-openssl-1.0.2/share/man
+ MAN1=1
+ MAN3=3
+-MANSUFFIX=
++MANSUFFIX=ssl
++MANSECTION=SSL
+ HTMLSUFFIX=html
+ HTMLDIR=$(OPENSSLDIR)/html
+ SHELL=/bin/sh
+@@ -658,7 +659,7 @@ install_docs:
+ 		echo "installing man$$sec/$$fn.$${sec}$(MANSUFFIX)"; \
+ 		(cd `$(PERL) util/dirname.pl $$i`; \
+ 		sh -c "$$pod2man \
+-			--section=$$sec --center=OpenSSL \
++			--section=$${sec}$(MANSECTION) --center=OpenSSL \
+ 			--release=$(VERSION) `basename $$i`") \
+ 			>  $(INSTALL_PREFIX)$(MANDIR)/man$$sec/$$fn.$${sec}$(MANSUFFIX); \
+ 		$(PERL) util/extract-names.pl < $$i | \
+@@ -675,7 +676,7 @@ install_docs:
+ 		echo "installing man$$sec/$$fn.$${sec}$(MANSUFFIX)"; \
+ 		(cd `$(PERL) util/dirname.pl $$i`; \
+ 		sh -c "$$pod2man \
+-			--section=$$sec --center=OpenSSL \
++			--section=$${sec}$(MANSECTION) --center=OpenSSL \
+ 			--release=$(VERSION) `basename $$i`") \
+ 			>  $(INSTALL_PREFIX)$(MANDIR)/man$$sec/$$fn.$${sec}$(MANSUFFIX); \
+ 		$(PERL) util/extract-names.pl < $$i | \

@@ -1,0 +1,40 @@
+Source: openssl1.0
+Build-Depends: debhelper (>= 9), m4, bc, dpkg-dev (>= 1.15.7)
+Section: utils
+Priority: optional
+Maintainer: Laurent Declercq <l.declercq@nuxwin.com>
+Standards-Version: 3.9.8
+Homepage: https://www.openssl.org
+
+Package: imscp-libssl1.0.2
+Section: libs
+Priority: optional
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Secure Sockets Layer toolkit - shared libraries
+ This package is part of the OpenSSL project's implementation of the SSL
+ and TLS cryptographic protocols for secure communication over the
+ Internet.
+ .
+ It provides the libssl and libcrypto shared libraries.
+ .
+ This package is provided by i-MSCP team (https://i-mscp.net) for building of
+ PHP versions that are not compatible with newest >= 1.1.x OpenSSL versions.
+
+Package: imscp-libssl1.0.2-dev
+Section: libdevel
+Priority: optional
+Architecture: any
+Multi-Arch: same
+Depends: imscp-libssl1.0.2 (= ${binary:Version}), ${misc:Depends}
+Description: Secure Sockets Layer toolkit - development files
+ This package is part of the OpenSSL project's implementation of the SSL
+ and TLS cryptographic protocols for secure communication over the
+ Internet.
+ .
+ It contains development libraries and header files.
+ .
+ This package is provided by i-MSCP team (https://i-mscp.net) for building of
+ PHP versions that are not compatible with newest >= 1.1.x OpenSSL versions.

@@ -1,0 +1,7 @@
+opt/imscp-openssl-1.0.2/lib/*/libssl.so
+opt/imscp-openssl-1.0.2/lib/*/libcrypto.so
+opt/imscp-openssl-1.0.2/lib/*/libssl.a
+opt/imscp-openssl-1.0.2/lib/*/libcrypto.a
+opt/imscp-openssl-1.0.2/lib/*/pkgconfig
+opt/imscp-openssl-1.0.2/include/openssl/*
+opt/imscp-openssl-1.0.2/include/*/openssl

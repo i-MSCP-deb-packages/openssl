@@ -1,0 +1,2 @@
+version=3
+opts=pgpsigurlmangle=s/$/.asc/ ftp://ftp.openssl.org/source/openssl-(1\.0\.2[a-z]?)\.tar\.gz

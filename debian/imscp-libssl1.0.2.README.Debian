@@ -1,0 +1,12 @@
+OpenSSL shared libraries for i-MSCP PhpSwitcher Plugin
+------------------------------------------------------
+
+This package provides older 1.0.x OpenSSL shared libraries (libssl and
+libcrypto), as required by the i-MSCP PhpSwitcher plug-in for building
+PHP versions that are not compatible with newest >= 1.1.x OpenSSL versions.
+
+The files provided by this package don't replace nor conflict with those
+provided by the operating system as they are installed under the /opt
+hierarchy.
+
+ -- Laurent Declercq <l.declercq@nuxwin.com>  Wed, 24 Oct 2018 01:20:28 +0200

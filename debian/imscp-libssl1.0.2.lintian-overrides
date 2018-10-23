@@ -1,0 +1,3 @@
+imscp-libssl1.0.2 binary: embedded-library
+imscp-libssl1.0.2: new-package-should-close-itp-bug
+imscp-libssl1.0.2: package-name-doesnt-match-sonames libcrypto1.0.2 libssl1.0.2
