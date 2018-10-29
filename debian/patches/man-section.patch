@@ -1,9 +1,15 @@
+From: Laurent Declercq <l.declercq@nuxwin.com>
+Date: Mon, 29 Oct 2018 03:16:18 +0100
+Subject: man-section
+
 ---
- Makefile.org |    7 ++++---
+ Makefile.org | 7 ++++---
  1 file changed, 4 insertions(+), 3 deletions(-)
 
---- openssl-1.0.orig/Makefile.org
-+++ openssl-1.0/Makefile.org
+diff --git a/Makefile.org b/Makefile.org
+index 8de716e..4fb169c 100644
+--- a/Makefile.org
++++ b/Makefile.org
 @@ -162,7 +162,8 @@ MAKEFILE= Makefile
  MANDIR=/opt/imscp-openssl-1.0.2/share/man
  MAN1=1

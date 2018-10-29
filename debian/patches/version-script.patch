@@ -1,6 +1,22 @@
---- openssl-1.0.orig/Configure
-+++ openssl-1.0/Configure
-@@ -1743,6 +1743,8 @@ if ($strict_warnings)
+From: Laurent Declercq <l.declercq@nuxwin.com>
+Date: Mon, 29 Oct 2018 03:16:19 +0100
+Subject: version-script
+
+---
+ Configure                 |    2 +
+ engines/ccgost/openssl.ld |   10 +
+ engines/openssl.ld        |   10 +
+ openssl.ld                | 4608 +++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 4630 insertions(+)
+ create mode 100644 engines/ccgost/openssl.ld
+ create mode 100644 engines/openssl.ld
+ create mode 100644 openssl.ld
+
+diff --git a/Configure b/Configure
+index dbaed5b..4cc7748 100755
+--- a/Configure
++++ b/Configure
+@@ -1754,6 +1754,8 @@ if ($strict_warnings)
  		}
  	}
  
@@ -9,8 +25,43 @@
  open(IN,'<Makefile.org') || die "unable to read Makefile.org:$!\n";
  unlink("$Makefile.new") || die "unable to remove old $Makefile.new:$!\n" if -e "$Makefile.new";
  open(OUT,">$Makefile.new") || die "unable to create $Makefile.new:$!\n";
+diff --git a/engines/ccgost/openssl.ld b/engines/ccgost/openssl.ld
+new file mode 100644
+index 0000000..42d0295
 --- /dev/null
-+++ openssl-1.0/openssl.ld
++++ b/engines/ccgost/openssl.ld
+@@ -0,0 +1,10 @@
++OPENSSL_1.0.2 {
++	global:
++		bind_engine;
++		v_check;
++		OPENSSL_init;
++		OPENSSL_finish;
++	local:
++		*;
++};
++
+diff --git a/engines/openssl.ld b/engines/openssl.ld
+new file mode 100644
+index 0000000..42d0295
+--- /dev/null
++++ b/engines/openssl.ld
+@@ -0,0 +1,10 @@
++OPENSSL_1.0.2 {
++	global:
++		bind_engine;
++		v_check;
++		OPENSSL_init;
++		OPENSSL_finish;
++	local:
++		*;
++};
++
+diff --git a/openssl.ld b/openssl.ld
+new file mode 100644
+index 0000000..ff2f3c9
+--- /dev/null
++++ b/openssl.ld
 @@ -0,0 +1,4608 @@
 +OPENSSL_1.0.2d {
 +	global:
@@ -4619,30 +4670,4 @@
 +               SRP_VBASE_get1_by_user;
 +               SRP_user_pwd_free;
 +} OPENSSL_1.0.2d;
-+
---- /dev/null
-+++ openssl-1.0/engines/openssl.ld
-@@ -0,0 +1,10 @@
-+OPENSSL_1.0.2 {
-+	global:
-+		bind_engine;
-+		v_check;
-+		OPENSSL_init;
-+		OPENSSL_finish;
-+	local:
-+		*;
-+};
-+
---- /dev/null
-+++ openssl-1.0/engines/ccgost/openssl.ld
-@@ -0,0 +1,10 @@
-+OPENSSL_1.0.2 {
-+	global:
-+		bind_engine;
-+		v_check;
-+		OPENSSL_init;
-+		OPENSSL_finish;
-+	local:
-+		*;
-+};
 +

@@ -1,10 +1,16 @@
+From: Laurent Declercq <l.declercq@nuxwin.com>
+Date: Mon, 29 Oct 2018 03:16:19 +0100
+Subject: valgrind
+
 ---
- crypto/rand/md_rand.c |    2 ++
+ crypto/rand/md_rand.c | 2 ++
  1 file changed, 2 insertions(+)
 
---- openssl-1.0.orig/crypto/rand/md_rand.c
-+++ openssl-1.0/crypto/rand/md_rand.c
-@@ -490,6 +490,7 @@ int ssleay_rand_bytes(unsigned char *buf
+diff --git a/crypto/rand/md_rand.c b/crypto/rand/md_rand.c
+index a7af9f9..d07ab88 100644
+--- a/crypto/rand/md_rand.c
++++ b/crypto/rand/md_rand.c
+@@ -490,6 +490,7 @@ int ssleay_rand_bytes(unsigned char *buf, int num, int pseudo, int lock)
              goto err;
  
  #ifndef PURIFY                  /* purify complains */
@@ -12,7 +18,7 @@
          /*
           * The following line uses the supplied buffer as a small source of
           * entropy: since this buffer is often uninitialised it may cause
-@@ -500,6 +501,7 @@ int ssleay_rand_bytes(unsigned char *buf
+@@ -500,6 +501,7 @@ int ssleay_rand_bytes(unsigned char *buf, int num, int pseudo, int lock)
          if (!MD_Update(&m, buf, j))
              goto err;
  #endif

@@ -1,5 +1,31 @@
---- openssl-1.0.orig/Makefile.org
-+++ openssl-1.0/Makefile.org
+From: Laurent Declercq <l.declercq@nuxwin.com>
+Date: Mon, 29 Oct 2018 03:16:18 +0100
+Subject: engines-path
+
+---
+ Configure               |  2 +-
+ Makefile.org            |  4 ++--
+ engines/Makefile        | 10 +++++-----
+ engines/ccgost/Makefile |  8 ++++----
+ 4 files changed, 12 insertions(+), 12 deletions(-)
+
+diff --git a/Configure b/Configure
+index 84f6a7d..22953fb 100755
+--- a/Configure
++++ b/Configure
+@@ -1997,7 +1997,7 @@ while (<IN>)
+ 		}
+ 	elsif	(/^#define\s+ENGINESDIR/)
+ 		{
+-		my $foo = "$prefix/$libdir/engines";
++		my $foo = "$prefix/$libdir/openssl-1.0.2/engines";
+ 		$foo =~ s/\\/\\\\/g;
+ 		print OUT "#define ENGINESDIR \"$foo\"\n";
+ 		}
+diff --git a/Makefile.org b/Makefile.org
+index f51f0a7..aec7e57 100644
+--- a/Makefile.org
++++ b/Makefile.org
 @@ -369,7 +369,7 @@ libcrypto.pc: Makefile
  	    echo 'exec_prefix=$${prefix}'; \
  	    echo 'libdir=$${exec_prefix}/$(LIBDIR)'; \
@@ -18,8 +44,10 @@
  		$(INSTALL_PREFIX)$(INSTALLTOP)/$(LIBDIR)/pkgconfig \
  		$(INSTALL_PREFIX)$(INSTALLTOP)/include/openssl \
  		$(INSTALL_PREFIX)$(OPENSSLDIR)/misc \
---- openssl-1.0.orig/engines/Makefile
-+++ openssl-1.0/engines/Makefile
+diff --git a/engines/Makefile b/engines/Makefile
+index 2058ff4..df7def6 100644
+--- a/engines/Makefile
++++ b/engines/Makefile
 @@ -107,13 +107,13 @@ install:
  	@[ -n "$(INSTALLTOP)" ] # should be set by top Makefile...
  	@if [ -n "$(SHARED_LIBS)" ]; then \
@@ -50,19 +78,10 @@
  		done; \
  	fi
  	@target=install; $(RECURSIVE_MAKE)
---- openssl-1.0.orig/Configure
-+++ openssl-1.0/Configure
-@@ -1986,7 +1986,7 @@ while (<IN>)
- 		}
- 	elsif	(/^#define\s+ENGINESDIR/)
- 		{
--		my $foo = "$prefix/$libdir/engines";
-+		my $foo = "$prefix/$libdir/openssl-1.0.2/engines";
- 		$foo =~ s/\\/\\\\/g;
- 		print OUT "#define ENGINESDIR \"$foo\"\n";
- 		}
---- openssl-1.0.orig/engines/ccgost/Makefile
-+++ openssl-1.0/engines/ccgost/Makefile
+diff --git a/engines/ccgost/Makefile b/engines/ccgost/Makefile
+index f378530..b42a641 100644
+--- a/engines/ccgost/Makefile
++++ b/engines/ccgost/Makefile
 @@ -47,7 +47,7 @@ install:
  		pfx=lib; \
  		if expr "$(PLATFORM)" : "Cygwin" >/dev/null; then \

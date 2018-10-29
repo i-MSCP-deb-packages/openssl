@@ -1,5 +1,15 @@
---- openssl-1.0.orig/crypto/opensslv.h
-+++ openssl-1.0/crypto/opensslv.h
+From: Laurent Declercq <l.declercq@nuxwin.com>
+Date: Mon, 29 Oct 2018 03:16:19 +0100
+Subject: soname
+
+---
+ crypto/opensslv.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/crypto/opensslv.h b/crypto/opensslv.h
+index 76a7b00..b397655 100644
+--- a/crypto/opensslv.h
++++ b/crypto/opensslv.h
 @@ -88,7 +88,7 @@ extern "C" {
   * should only keep the versions that are binary compatible with the current.
   */

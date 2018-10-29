@@ -1,12 +1,16 @@
+From: Laurent Declercq <l.declercq@nuxwin.com>
+Date: Mon, 29 Oct 2018 03:16:18 +0100
+Subject: debian-targets
+
 ---
- Configure |   58 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Configure | 58 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 58 insertions(+)
 
-Index: openssl-1.0.2o/Configure
-===================================================================
---- openssl-1.0.2o.orig/Configure
-+++ openssl-1.0.2o/Configure
-@@ -133,6 +133,13 @@ my $clang_devteam_warn = "-Wno-unused-pa
+diff --git a/Configure b/Configure
+index c7066dc..84f6a7d 100755
+--- a/Configure
++++ b/Configure
+@@ -133,6 +133,13 @@ my $clang_devteam_warn = "-Wno-unused-parameter -Wno-missing-field-initializers
  # Warn that "make depend" should be run?
  my $warn_make_depend = 0;
  
