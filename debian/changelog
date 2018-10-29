@@ -1,3 +1,11 @@
+openssl1.0 (1.0.2o-2) unstable; urgency=medium
+
+  * Updated d/watch download location
+  * Updated upstream GPG keys for tarball signature verification
+  * Added debian/upstream/signing-key.pgp to debian/source/include-binaries
+
+ -- Laurent Declercq <l.declercq@nuxwin.com>  Mon, 29 Oct 2018 02:53:02 +0100
+
 openssl1.0 (1.0.2o-1) unstable; urgency=medium
 
   * Initial release.
