@@ -5,6 +5,8 @@ Priority: optional
 Maintainer: Laurent Declercq <l.declercq@nuxwin.com>
 Standards-Version: 3.9.8
 Homepage: https://www.openssl.org
+Vcs-Git: https://github.com/i-MSCP-deb-packages/openssl.git
+Vcs-Browser: https://github.com/i-MSCP-deb-packages/openssl
 
 Package: imscp-libssl1.0.2
 Section: libs
