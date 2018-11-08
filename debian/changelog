@@ -1,3 +1,9 @@
+openssl1.0 (1.0.2p-2) unstable; urgency=medium
+
+  * Added VCS fields in d/control
+
+ -- Laurent Declercq <builder@jenkins.bbox.nuxwin.com>  Thu, 08 Nov 2018 11:15:54 +0100
+
 openssl1.0 (1.0.2p-1) unstable; urgency=medium
 
   * New upstream version 1.0.2p
